@@ -1,4 +1,4 @@
-
+package DojoAssignments.JavaFun.PythagoreanTheorem.Pythagorean;
 
 
 public class PythagoreanTest {

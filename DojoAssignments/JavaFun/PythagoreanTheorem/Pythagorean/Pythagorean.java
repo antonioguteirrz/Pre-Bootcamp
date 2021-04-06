@@ -1,4 +1,4 @@
-
+package DojoAssignments.JavaFun.PythagoreanTheorem.Pythagorean;
 
 public class Pythagorean {
     public double calculateHypotenuse(int legA, int legB) {

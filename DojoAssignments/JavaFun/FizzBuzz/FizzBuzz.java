@@ -1,4 +1,4 @@
-
+package DojoAssignments.JavaFun.FizzBuzz;
 
 public class FizzBuzz {
     public String fizzBuzz(int number){

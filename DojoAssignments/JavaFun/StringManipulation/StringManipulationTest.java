@@ -1,4 +1,4 @@
-
+package DojoAssignments.JavaFun.StringManipulation;
 
 public class StringManipulationTest {
     
