@@ -1,4 +1,4 @@
-package DojoAssignments.JavaFun.SingleLinkedList;
+package DojoAssignments.JavaFun.ListAssignment;
 
 public class SinglyLinkedList {
     public Node head;
@@ -19,10 +19,17 @@ public class SinglyLinkedList {
         }
     }    
     public void remove(){
-        Node current_node = head;
-        while(head!=null){
-            current_node = head.next;
+        Node runner = head;
+        while(runner!=null){
+            runner = runner.next;
         }
-        head = null;
+        head = runner;
+    }
+    public void printValues(){
+        Node runner = head;
+        while(runner!=null){
+            runner = runner.next;
+            System.out.println(runner);
+        }
     }
 }

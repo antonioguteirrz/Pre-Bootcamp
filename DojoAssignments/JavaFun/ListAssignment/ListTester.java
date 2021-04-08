@@ -1,9 +1,9 @@
-package DojoAssignments.JavaFun.SingleLinkedList;
+package DojoAssignments.JavaFun.ListAssignment;
 
 
 public class ListTester {
     public static void main(String[] args) {
-        System.out.println("hello");
+        System.out.println("heloccc");
         SinglyLinkedList sll = new SinglyLinkedList();
         sll.add(3);
         sll.add(4);
@@ -13,7 +13,8 @@ public class ListTester {
         sll.add(2);
         sll.remove();
         sll.remove();
-        //sll.printValues();
-        System.out.println(sll);
+        sll.printValues();
+
+
     }
 }

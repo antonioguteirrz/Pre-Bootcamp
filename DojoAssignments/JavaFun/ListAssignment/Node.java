@@ -1,4 +1,4 @@
-package DojoAssignments.JavaFun.SingleLinkedList;
+package DojoAssignments.JavaFun.ListAssignment;
 
 public class Node {
     public int value;
