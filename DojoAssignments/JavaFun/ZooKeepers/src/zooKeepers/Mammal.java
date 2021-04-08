@@ -1,4 +1,5 @@
-package zooKeeper;
+package zooKeepers;
+
 
 class Mammal {
 	int energyLevel= 100;

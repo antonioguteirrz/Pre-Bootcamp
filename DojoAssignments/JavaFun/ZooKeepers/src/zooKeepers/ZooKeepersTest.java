@@ -1,6 +1,6 @@
-package zooKeeper;
+package zooKeepers;
 
-public class GorillaTest {
+public class ZooKeepersTest {
 
 	public static void main(String[] args) {
 		Gorilla test1 = new Gorilla();

@@ -1,4 +1,4 @@
-package zooKeeper;
+package zooKeepers;
 
 public class Gorilla extends Mammal{
 
