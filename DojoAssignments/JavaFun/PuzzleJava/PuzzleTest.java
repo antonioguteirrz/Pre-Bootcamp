@@ -1,7 +1,5 @@
 package DojoAssignments.JavaFun.PuzzleJava;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Arrays;
+
 
 public class PuzzleTest {
     public static void main(String[]args){
