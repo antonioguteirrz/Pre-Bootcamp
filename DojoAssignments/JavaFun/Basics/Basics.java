@@ -42,6 +42,12 @@ public class Basics{
         }
         int average = sum/arr.length;
         System.out.println(average);
+    }
+    public void storeArrayY(int number){
+        int [] y ;
+        for(int i = 0; i<number;i++){
+            y [i] = i;
+        }
 
     }
 }
