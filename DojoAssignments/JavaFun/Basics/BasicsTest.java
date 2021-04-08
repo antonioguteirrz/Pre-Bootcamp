@@ -8,11 +8,16 @@ public class BasicsTest{
 
     //numbers.printOddNumber(256);
     // numbers.printNumberSum(256);
-    int [] x ={2,10,3,5,100};
+    int [] x ={2,10,3,-5,100,-7};
     //numbers.printArray(x);
     //numbers.printArrayMax(x);
-    numbers.printArrayAverage(x);
-
+    //numbers.printArrayAverage(x);
+    //numbers.storeArrayY(256);
+    //numbers.printGreaterThanY(x, 6);
+    //numbers.printSquareValues(x);
+    //numbers.removeNegatives(x);
+    //numbers.maxMinAverage(x);
+    numbers.shiftArray(x);
 }
     
 }

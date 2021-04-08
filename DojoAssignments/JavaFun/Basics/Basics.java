@@ -1,5 +1,6 @@
 package DojoAssignments.JavaFun.Basics;
-
+import java.util.ArrayList;
+import java.util.Arrays;
 public class Basics{
     public void printNumber(int number){
         for(int i = 1; i<number;i++){
@@ -44,10 +45,59 @@ public class Basics{
         System.out.println(average);
     }
     public void storeArrayY(int number){
-        int [] y ;
+        ArrayList<Integer> y = new ArrayList<Integer>();
         for(int i = 0; i<number;i++){
-            y [i] = i;
+            if(i%2==1){
+            y.add(i);}
         }
-
+        System.out.println(y);
     }
+    public void printGreaterThanY( int arr[], int y){
+        int count = 0;
+    for(int i = 0;i<arr.length;i++){ 
+        if(arr[i]>y){
+            count++;
+        }}
+        System.out.println(count);
+    }
+
+    public void printSquareValues(int arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr[i] *arr[i];
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+    public void removeNegatives(int arr[]){
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i]<0){
+                arr[i]=0;
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+    public void maxMinAverage(int arr[]){
+        double [] arr2 = new double[3];
+        int sum = 0;
+        int max=0;
+        int min=0;
+        for(int i = 0; i < arr.length; i++){
+
+            sum = sum + arr[i];
+            if(arr[i]> max){
+                max = arr[i];
+            }
+            if(arr[i]<min){
+                min = arr[i];
+            }
+
+        }
+        arr2[0]=max;
+        arr2[1]=min;
+        arr2[2]= sum/arr.length;
+        System.out.println(Arrays.toString(arr2));
+    }
+    public void shiftArray(int [] arr){
+            System.arraycopy(arr, 1, arr, 0, arr.length - 1);
+            System.out.println(Arrays.toString(arr));
+}
 }
