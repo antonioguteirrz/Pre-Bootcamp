@@ -1,7 +1,9 @@
 package zooKeepers;
 
-public class Gorilla extends Mammal{
-
+class Gorilla extends Mammal{
+	Gorilla(){
+		int energyLevel = 100;
+		}
 	public int throwSomething() {
 		System.out.println("Gorilla threw something and negated 5 energy from monkey");
 		energyLevel = energyLevel - 5;

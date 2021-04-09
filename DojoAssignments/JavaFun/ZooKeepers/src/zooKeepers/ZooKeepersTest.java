@@ -10,8 +10,15 @@ public class ZooKeepersTest {
 		test1.eatBanana();
 		test1.eatBanana();
 		test1.climb();
-		
-		System.out.println(test1.displayEnergy());
+		Bat test5 = new Bat();
+		test5.attackTown();
+		test5.attackTown();
+		test5.attackTown();
+		test5.eatHumans();
+		test5.eatHumans();
+		test5.fly();
+		test5.fly();
+		System.out.println(test5.displayEnergy());
 		
 		
 //She asks that you demonstrate that the class works as expected by having the 
