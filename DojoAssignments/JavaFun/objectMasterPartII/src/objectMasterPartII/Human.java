@@ -7,14 +7,9 @@ protected int strength;
 protected int stealth;
 protected int intelligence;
 protected int health;
-int count = 0;
 
-public int getCount() {
-	return count;
-}
-public void setCount(int count) {
-	this.count = count;
-}
+
+
 public int getStrength() {
 	return strength;
 }
