@@ -1,7 +1,7 @@
 package objectMasterPartII;
 
 class Samurai extends Human{
-	public static int count;
+	
 	Samurai(){
 		super();
 		this.health = 200;

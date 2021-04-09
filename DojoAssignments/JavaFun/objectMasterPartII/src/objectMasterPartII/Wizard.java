@@ -5,6 +5,7 @@ class Wizard extends Human{
 		super();
 		this.health = 50;
 		this.intelligence = 8;
+		count++;
 	}
 
 	public void heal(Human human) {

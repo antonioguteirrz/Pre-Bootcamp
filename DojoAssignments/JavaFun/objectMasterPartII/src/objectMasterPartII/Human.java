@@ -7,7 +7,7 @@ protected int strength;
 protected int stealth;
 protected int intelligence;
 protected int health;
-
+protected static int count;
 
 
 public int getStrength() {
