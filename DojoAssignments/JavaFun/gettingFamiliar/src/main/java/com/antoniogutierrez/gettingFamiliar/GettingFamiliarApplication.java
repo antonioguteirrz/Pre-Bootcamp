@@ -1,15 +1,13 @@
-package com.codingdojo.firstproject;
+package com.antoniogutierrez.gettingFamiliar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-
 @SpringBootApplication
-public class FirsprojectApplication {
+public class GettingFamiliarApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirsprojectApplication.class, args);
+		SpringApplication.run(GettingFamiliarApplication.class, args);
 	}
-	
+
 }
