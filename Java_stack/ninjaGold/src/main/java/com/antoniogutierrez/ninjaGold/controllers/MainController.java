@@ -3,9 +3,7 @@ package com.antoniogutierrez.ninjaGold.controllers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
 import javax.servlet.http.HttpSession;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,11 +16,10 @@ public class MainController {
 	 List<String> str_list = new ArrayList<String>();
 	@GetMapping("")
 	public String index(HttpSession session) {
-
 		
-		 
-		
-
+		if(session.getAttribute("number") == null) {
+			session.setAttribute("number", "");
+		}
 		if(session.getAttribute("number").equals( "farm")) {
 			Integer gold = (Integer) session.getAttribute("gold");
 			Random r = new Random();
@@ -32,6 +29,7 @@ public class MainController {
 			gold = gold + result;
 			session.setAttribute("gold", gold);
 			str_list.add("Added " +result + " gold");
+			session.setAttribute("number", "");
 		}
 		if(session.getAttribute("number").equals( "cave")) {
 			Integer gold = (Integer) session.getAttribute("gold");
@@ -42,6 +40,7 @@ public class MainController {
 			gold = gold + result;
 			session.setAttribute("gold", gold);
 			str_list.add("Added " +result + " gold");
+			session.setAttribute("number", "");
 		}
 		if(session.getAttribute("number").equals( "house")) {
 			Integer gold = (Integer) session.getAttribute("gold");
@@ -52,6 +51,7 @@ public class MainController {
 			gold = gold + result;
 			session.setAttribute("gold", gold);
 			str_list.add("Added " +result + " gold");
+			session.setAttribute("number", "");
 		}
 		if(session.getAttribute("number").equals( "casino")) {
 			Integer gold = (Integer) session.getAttribute("gold");
@@ -62,6 +62,7 @@ public class MainController {
 			gold = gold + result;
 			session.setAttribute("gold", gold);
 			str_list.add("Added " +result + " gold");
+			session.setAttribute("number", "");
 		}
 		if(session.getAttribute("number").equals( "reset")) {
 			str_list.clear();
