@@ -1,4 +1,4 @@
-package com.antoniogutierrez.goldNinja;
+package com.antoniogutierrez.updateDelete;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(GoldNinjaApplication.class);
+		return application.sources(UpdateDeleteApplication.class);
 	}
 
 }

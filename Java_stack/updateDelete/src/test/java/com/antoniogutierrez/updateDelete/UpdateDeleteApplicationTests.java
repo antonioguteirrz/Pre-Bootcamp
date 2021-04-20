@@ -1,10 +1,10 @@
-package com.antoniogutierrez.goldNinja;
+package com.antoniogutierrez.updateDelete;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GoldNinjaApplicationTests {
+class UpdateDeleteApplicationTests {
 
 	@Test
 	void contextLoads() {
