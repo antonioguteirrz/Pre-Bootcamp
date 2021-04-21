@@ -20,11 +20,11 @@
 				<c:forEach items="${allLanguages}" var="language">
 					<tr>
 						<td><c:out value="${language.name }" /></td>
-						<td><c:out value="${language.creator }" /></td>
-						<td><c:out value="${language.version }" /></td>
+						<td><c:out value="${language.creator}" /></td>
+						<td><c:out value="${language.version}" /></td>
 						<td>
-							<a href="//${show.id}">Edit</a>
-							<a href="/shows/${show.id}">Show</a>
+							<a href="/language/${language.id}/edit">Edit</a>
+							<a href="/language/${language.id}/show">Show</a>
 						</td>
 					</tr>
 				</c:forEach>
@@ -34,21 +34,23 @@
 
 
 <h1>New Language</h1>
-<form:form action="/language/add" method="post" modelAttribute="language">
+<form:form action="/language/add" method="post" modelAttribute="languageObj">
+    
     <p>
+    	
         <form:label path="name">Name</form:label>
-        <form:errors path="name"/>
         <form:input path="name"/>
+        <form:errors path="name"/>
     </p>
     <p>
-        <form:label path="creator">Creator</form:label>
+    	<form:label path="creator">Creator</form:label>
+        <form:input path="creator"/>
         <form:errors path="creator"/>
-        <form:textarea path="creator"/>
     </p>
     <p>
         <form:label path="version">Version</form:label>
-        <form:errors path="version"/>
         <form:input path="version"/>
+        <form:errors path="version"/>
     </p>
     
     <input type="submit" value="Submit"/>
