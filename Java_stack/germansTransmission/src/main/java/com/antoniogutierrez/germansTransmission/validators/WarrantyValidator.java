@@ -1,5 +1,7 @@
 package com.antoniogutierrez.germansTransmission.validators;
 
+import javax.validation.Validator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -13,7 +15,7 @@ public class WarrantyValidator implements Validator{
 	
 	@Autowired 
 	private WarrantyService warrantyServ;
-
+	
 	@Override
 	public boolean supports(Class<?> clazz) {
 		return Warranty.class.equals(clazz);
