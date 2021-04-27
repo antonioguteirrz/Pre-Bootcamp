@@ -18,16 +18,22 @@ public class Warranty {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
+    
 	
     @NotEmpty(message = "First name must not be empty")
     private String firstName;
     
+    
+    
     @NotEmpty(message = "Last  name must not be empty")
     private String lastName;
     
-    @NotEmpty(message = "Email must not be empty")
-    private String email;
+    @NotEmpty
+    private String warrantyNumber;
     
+    
+	@NotEmpty(message = "Email must not be empty")
+    private String email;
     
     
     public Warranty() {
@@ -56,6 +62,12 @@ public class Warranty {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	public String getWarrantyNumber() {
+		return warrantyNumber;
+	}
+	public void setWarrantyNumber(String warrantyNumber) {
+		this.warrantyNumber = warrantyNumber;
+	}
 	public String getEmail() {
 		return email;
 	}
@@ -64,6 +76,8 @@ public class Warranty {
 	}
 	@Column(updatable=false)
     private Date createdAt;
+	
+	
     private Date updatedAt;
     
     @PrePersist
