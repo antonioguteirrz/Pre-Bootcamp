@@ -10,26 +10,7 @@
 </head>
 <body>
 <div class="container">
-		<h1>Register</h1>
-		<p><form:errors path="warrrantyObj.*"/></p>
-	    <form:form method="POST" action="/newWarranty" modelAttribute="warrantyObj">
-	        <p>
-	            <form:label path="firstName">First Name:</form:label>
-	            <form:input  path="firstName"/>
-	            
-	        </p>
-	        <p>
-	            <form:label path="lastName">Password:</form:label>
-	            <form:password path="lastName"/>
-	          
-	        </p>
-	        <p>
-	            <form:label path="email">Email:</form:label>
-	            <form:input type="email" path="email"/>
-	            
-	        </p>
-	        <input type="submit" value="Create Warranty!"/>
-	    </form:form>
+	Hello
 	</div>
 </body>
 </html>

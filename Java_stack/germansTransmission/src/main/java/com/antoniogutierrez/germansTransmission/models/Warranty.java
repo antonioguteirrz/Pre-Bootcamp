@@ -28,22 +28,28 @@ public class Warranty {
     @NotEmpty(message = "Last  name must not be empty")
     private String lastName;
     
+	@NotEmpty(message = "Email must not be empty")
+    private String email;
+	
     @NotEmpty
     private String warrantyNumber;
     
     
-	@NotEmpty(message = "Email must not be empty")
-    private String email;
+
     
     
     public Warranty() {
     	
     }
- public Warranty(String firstName, String lastName,String email) {
-    	
+ public Warranty(String firstName, String lastName,String email, String warrantyNumber) {
+    	this.firstName = firstName;
+    	this.lastName= lastName;
+    	this.email= email;
+    	this.warrantyNumber = warrantyNumber;
     }
     
     
+ 
     public Long getId() {
 		return id;
 	}
@@ -86,6 +92,12 @@ public class Warranty {
     }
     @PreUpdate
     protected void onUpdate(){
-        this.updatedAt = new Date();
+        this.setUpdatedAt(new Date());
     }
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 }

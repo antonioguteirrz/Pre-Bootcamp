@@ -1,47 +1,55 @@
 package com.antoniogutierrez.germansTransmission.controllers;
 
-import javax.validation.Valid;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Iterator;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-
-import com.antoniogutierrez.germansTransmission.models.Warranty;
-import com.antoniogutierrez.germansTransmission.services.WarrantyService;
 
 @Controller
 public class MainController {
 	
-	@Autowired 
-	private WarrantyService warrantyServ;
 	
 	
+
 	
 	@GetMapping("/newwarranty")
-	public String index() {
+	public String index() throws IOException {
+		
+		try  
+		{ 
+		FileInputStream file = new FileInputStream(new File("C:\\Users\\anton\\OneDrive\\Desktop\\Dojo Assignments\\Pre-Bootcamp\\Java_stack\\germansTransmission/GermansTransmission.xlsx"));
+		Workbook workbook = new XSSFWorkbook(file);
+		Sheet sheet = workbook.getSheetAt(0);
+		Iterator<Row> itr = sheet.iterator();
+		while(itr.hasNext()){
+		Row row = itr.next();
+		Iterator<Cell> cellIterator = row.cellIterator();
+		
+		System.out.print(cellIterator.next() +" ");
+		System.out.print(cellIterator.next() +" ");
+		System.out.print(cellIterator.next() +" ");
+		System.out.print(cellIterator.next() +" ");
+
+		}
+		}
+		catch(Exception e)  
+		{  
+		e.printStackTrace();  
+		}  
+		  
+		  
 		return "home.jsp";
-	}
-	
-	@PostMapping("/newWarranty")
-	public String newWarranty(	@Valid @ModelAttribute("warrantyObj") Warranty filledWarranty, 
-								BindingResult results,
-								Model model
-			) {
-				// IF ERRORS, DISPLAY THE SAME JSP
-				if(results.hasErrors()) {
-					model.addAttribute("allWarranties", warrantyServ.allWarranties());
-					return "home.jsp";
-				}
-				// IF NO ERRORS CREATE SHOW AND REDIRECT
-				else {
-					warrantyServ.saveWarranty(filledWarranty);
-					return "redirect:/newwarranty";
-				}
 			}
+	
+	
 	}
 
 
