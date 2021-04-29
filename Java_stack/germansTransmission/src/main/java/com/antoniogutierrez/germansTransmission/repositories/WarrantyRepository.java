@@ -11,4 +11,6 @@ public interface WarrantyRepository extends CrudRepository<Warranty,Long>{
 		List <Warranty> findAll();
 
 		Warranty findByEmail(String email);
+		
+		
 }
