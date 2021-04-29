@@ -24,7 +24,7 @@ public class MainController {
 
 	@GetMapping("/checkwarranty")
 	public String checkWarranty(@ModelAttribute("warrantyObj")Warranty warrantyObj) {
-		System.out.println(warrantyObj.getWarrantyNumber());
+		
 		return "findWarranty.jsp";
 	}
 	
@@ -32,7 +32,7 @@ public class MainController {
 	@PostMapping("/checkWarranty")
 	public String checkingWarranty(@ModelAttribute("warrantyObj")Warranty warrantyObj, Model model) throws IOException {
 		
-		Warranty personFound = warrantyServ.findWarranty(warrantyObj);
+		Warranty personFound = warrantyServ.findWarranty(warrantyObj.getWarrantyNumber());
 		if(personFound==null) {
 			
 			return "couldNotFind.jsp";
