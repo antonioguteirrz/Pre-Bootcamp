@@ -9,6 +9,11 @@
 <title>New Registration</title>
 </head>
 <body>
-Hello this is home <a href = "http://localhost:8080/checkwarranty">warranty check</a>
+<h1><c:out value="${personFound.firstName}" /></h1>
+<c:out value="${personFound.lastName}" />
+<c:out value="${personFound.email}" />
+<div class="container">
+
+	</div>
 </body>
 </html>

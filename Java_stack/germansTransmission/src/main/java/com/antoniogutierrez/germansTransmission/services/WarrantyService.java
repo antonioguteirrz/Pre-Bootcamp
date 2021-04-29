@@ -40,17 +40,19 @@ private WarrantyRepository warrantyRepo;
 		return warrantyRepo.findAll();
 	}
 public Warranty findWarranty(String warranty) throws IOException {
-		
+	ArrayList<Object>  myFNamesArray = new ArrayList<Object>();
+	ArrayList<Object>  myLNamesArray = new ArrayList<Object>();
+	ArrayList<Object>  myWarrantyArray = new ArrayList<Object>();
+	ArrayList<Object>  myEmailArray = new ArrayList<Object>();
 		try  
 		{ 
+			
 		FileInputStream file = new FileInputStream(new File("C:\\Users\\anton\\OneDrive\\Desktop\\Dojo Assignments\\Pre-Bootcamp\\Java_stack\\germansTransmission/GermansTransmission.xlsx"));
 		Workbook workbook = new XSSFWorkbook(file);
 		Sheet sheet = workbook.getSheetAt(0);
 		Iterator<Row> itr = sheet.iterator();
 		Row row = itr.next();
-		ArrayList<Cell>  myFNamesArray = new ArrayList<Cell>();
-		ArrayList<Cell>  myLNamesArray = new ArrayList<Cell>();
-		ArrayList<Object>  myWarrantyArray = new ArrayList<Object>();
+
 		
 		int i = 0;
 		while(itr.hasNext()){
@@ -59,27 +61,38 @@ public Warranty findWarranty(String warranty) throws IOException {
 		myFNamesArray.add(cell.next());
 		myLNamesArray.add(cell.next());
 		myWarrantyArray.add(cell.next());
+		myEmailArray.add(cell.next());
 		
 		i++;
 		
+		}
+		}
 
-		
-		}
-		System.out.println(myWarrantyArray);
-		System.out.println(warranty);
-		if(myWarrantyArray.get(0).contains(" Warratny number 3")) {
-			System.out.println("there is a match!");
-			
-		}
-		}
-		
-		
 		catch(Exception e) 
 		{  
 		e.printStackTrace();  
 		}
+		
+		int indexFound = 0;
+		for(int i=0;i<myWarrantyArray.size();i++) {
+			String checkWarr=myWarrantyArray.get(i).toString();
+			if(checkWarr.equalsIgnoreCase(warranty)) {
+				indexFound = i;
+
+				String firstNameFound = myFNamesArray.get(indexFound).toString();
+				String lastNameFound = myLNamesArray.get(indexFound).toString();
+				String warrantyFound = myWarrantyArray.get(indexFound).toString();
+				String emailFound = myEmailArray.get(indexFound).toString();
+				Warranty personID = new Warranty(firstNameFound,
+									lastNameFound,
+									warrantyFound,
+									emailFound); 
+				return  personID;
+			}
+		}
+		
+		
 		return null;
 		  
-	
 }
 }
