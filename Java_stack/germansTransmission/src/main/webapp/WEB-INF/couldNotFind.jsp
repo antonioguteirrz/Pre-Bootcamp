@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Cannot find warranty <a href="http://localhost:8080">Home</a>
+Cannot find warranty
 
 </body>
 </html>

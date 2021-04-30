@@ -19,7 +19,7 @@ public class MainController {
 	
 	@GetMapping("")
 	public String home() {
-		return "home.jsp";
+		return "aboutUs.jsp";
 	}
 
 	@GetMapping("/checkwarranty")

@@ -9,24 +9,24 @@
 <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style = "background-color:yellow">
 <div align="center">
-<h1>
+<h1 style = height:100%>
 Germans Transmissions
 </h1> 
 <div>
-<div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary active">
-    <input type="radio" name="options" id="option1" autocomplete="off" checked> 
-    <a href = "http://localhost:8080">About Us</a>
+<div class="btn-group btn-group-toggle" data-toggle="buttons" style= width:100%  >
+  <label class="btn btn-secondary" onclick ="active" onclick ="window.location.href = 'http://localhost:8080';" >
+    <input type="radio" name="options" autocomplete="off"> 
+	About Us
   </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="Warranty" id="option2" autocomplete="off"> 
-    <a href = "http://localhost:8080/checkwarranty">Warranty Check</a>
+  <label class="btn btn-secondary"  value = "About Us" onClick ="window.location.href = 'http://localhost:8080/checkwarranty';active">
+    <input type="radio" name="Warranty" autocomplete="off"> 
+    Warranty
   </label>
-  <label class="btn btn-secondary">
-    <input type="radio" name="options" id="option3" autocomplete="off">
-    <a href = "http://localhost:8080/contactUs">Contact Us</a>
+  <label class="btn btn-secondary" onClick ="window.location.href = 'http://localhost:8080/contactUs';active">
+    <input type="radio" name="options" autocomplete="off">
+    Contact Us
   </label>
 </div>
 </div>
