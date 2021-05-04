@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+h3{
+    color: gold;
+    text-align: center;
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+}
+form{
+    text-align: center;
+}
+.indibox{
+    text-align: center;
+    margin: auto;
+    width: auto;
+    height: auto;
+    border: solid gold 1px;
+}
+.activitiesbox{
+    margin: 10px;
+    width: auto;
+    height: 100px;
+    border: solid gold 1px;
+}
