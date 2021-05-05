@@ -41,15 +41,12 @@ public class MainController {
 		return "warrantyFound.jsp";
 			}
 		
-<<<<<<< HEAD
+
 	@GetMapping("/sendtoemail")
 	public String writeEmail(@ModelAttribute("warrantyObj")Warranty warrantyObj) {
 		
 		return "inputemail.jsp";
-	}		
-=======
-		
->>>>>>> 6658a45f37f444c7ed8a9879fdc018710bb8693c
+	}
 
 	
 		
