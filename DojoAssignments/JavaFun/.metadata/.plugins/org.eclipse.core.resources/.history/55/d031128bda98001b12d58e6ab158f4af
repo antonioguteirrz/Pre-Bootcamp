@@ -1,0 +1,13 @@
+package objectMasterPartI;
+
+class HumanTest {
+
+	public static void main(String[] args) {
+		Human wizard1 = new Human();
+		Human wizard2 = new Human();
+		Human wizard3 = new Human();
+		wizard3.attack(wizard2);
+		System.out.println(wizard2.getHealth());
+	}
+
+}

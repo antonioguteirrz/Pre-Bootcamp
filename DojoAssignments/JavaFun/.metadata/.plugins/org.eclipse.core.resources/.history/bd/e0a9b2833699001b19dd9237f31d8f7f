@@ -1,0 +1,10 @@
+package bankAccount;
+
+class bankAccount {
+	protected String accountNumber;
+	protected double checkingBalance;
+	protected double savingsBalance;
+	
+	
+
+}

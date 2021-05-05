@@ -1,0 +1,8 @@
+package CalculatorPartI;
+
+public class Calculator {
+	protected int operandOne;
+	Calculator(){
+	 
+	}
+}

@@ -1,0 +1,26 @@
+package bankAccount;
+import java.util.Random;
+
+class bankAccount {
+	protected String accountNumber;
+	protected double checkingBalance;
+	protected double savingsBalance;
+	protected static int numberOfAccounts;
+	bankAccount(){
+		accountNumber = accountNumber();
+	}
+	
+	private String accountNumber() {
+		Random r = new Random();
+		String bnumber ="";
+		for(int i=0;i<10;i++) {
+			int number = r.nextInt(9);
+			bnumber= bnumber +number;
+		}
+		
+		return bnumber;
+		
+	}
+	
+
+}

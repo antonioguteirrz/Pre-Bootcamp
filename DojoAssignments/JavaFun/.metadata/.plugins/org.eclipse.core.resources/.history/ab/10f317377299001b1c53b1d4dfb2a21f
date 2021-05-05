@@ -1,0 +1,36 @@
+package CalculatorPartI;
+
+public class Calculator {
+	protected double operandOne;
+	protected double operation;
+	protected double operandtwo;
+	protected double results;
+	
+	Calculator(){
+		 
+	}
+	protected int getOperandOne() {
+		return operandOne;
+	}
+	protected void setOperandOne(int operandOne) {
+		this.operandOne = operandOne;
+	}
+	protected int getOperation() {
+		return operation;
+	}
+	protected void setOperation(int operation) {
+		this.operation = operation;
+	}
+	protected int getOperandtwo() {
+		return operandtwo;
+	}
+	protected void setOperandtwo(int operandtwo) {
+		this.operandtwo = operandtwo;
+	}
+	public void performOperation() {
+		 results = operandOne + operation +operandtwo;
+	}
+	protected double getResults() {
+		return results;
+	}
+}

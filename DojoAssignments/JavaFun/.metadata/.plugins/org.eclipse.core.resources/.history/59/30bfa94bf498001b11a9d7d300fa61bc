@@ -1,0 +1,9 @@
+package objectMasterPartII;
+
+class Wizard extends Human{
+	Wizard(){
+		super();
+		this.health = 50;
+	}
+
+}

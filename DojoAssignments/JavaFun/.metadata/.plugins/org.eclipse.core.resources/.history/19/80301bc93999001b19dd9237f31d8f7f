@@ -1,0 +1,10 @@
+package bankAccount;
+
+class bankAccountTest {
+
+	public static void main(String[] args) {
+		BankAccount user = new BankAccount();
+
+	}
+
+}

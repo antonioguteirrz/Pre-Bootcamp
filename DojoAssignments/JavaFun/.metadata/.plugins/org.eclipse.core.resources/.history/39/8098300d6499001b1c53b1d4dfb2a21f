@@ -1,0 +1,11 @@
+package Phone;
+
+public class Ringable {
+
+	public interface Ringable() {
+	Ringable(){
+		super();
+	}
+	}
+
+}

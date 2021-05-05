@@ -1,0 +1,19 @@
+package zooKeepers;
+
+class Gorilla extends Mammal{
+
+	public int throwSomething() {
+		System.out.println("Gorilla threw something and negated 5 energy from monkey");
+		energyLevel = energyLevel - 5;
+		return energyLevel;
+	}
+	public void eatBanana() {
+		System.out.println("Yummy this gives me 10 plus energy!");
+		energyLevel= energyLevel+10;
+	}
+	public void climb() {
+		System.out.println("Me climb, ten less energy!");
+		energyLevel = energyLevel -10;
+		
+	}
+}

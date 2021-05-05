@@ -1,0 +1,9 @@
+package Phone;
+
+public class Ringable {
+
+	public Ringable() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

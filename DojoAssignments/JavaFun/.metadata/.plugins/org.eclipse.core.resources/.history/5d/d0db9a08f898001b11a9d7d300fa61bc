@@ -1,0 +1,17 @@
+package objectMasterPartII;
+
+
+public class HumanTest {
+	public static void main(String[] args) {
+		Wizard new_wizard =new Wizard();
+		Ninja new_ninja = new Ninja();
+		Ninja other_ninja = new Ninja();
+		
+		new_ninja.steal(new_wizard);
+		
+		System.out.println(new_wizard.getHealth());
+		System.out.println(new_ninja.getStealth());
+		
+	}
+
+}

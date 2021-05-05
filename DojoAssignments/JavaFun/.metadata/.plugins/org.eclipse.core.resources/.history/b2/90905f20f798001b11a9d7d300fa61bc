@@ -1,0 +1,13 @@
+package objectMasterPartII;
+
+
+public class HumanTest {
+	public static void main(String[] args) {
+		Wizard new_wizard = new Wizard();
+		Wizard other_wizard = new Wizard();
+		
+		new_wizard.fireball(other_wizard);
+		System.out.println(other_wizard.getHealth());
+	}
+
+}

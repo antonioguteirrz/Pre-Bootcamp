@@ -1,0 +1,10 @@
+package zooKeepers;
+
+
+class Mammal {
+	private int energyLevel;
+public int displayEnergy() {
+return this.energyLevel;
+}
+
+}
